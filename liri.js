@@ -102,11 +102,12 @@ var twitterKeys = keys.twitterKeys;
 		  if (err) {
 		    return console.log('Error occurred: ' + err);
 		  }
+		  var data = data.tracks.items[0];
 		 console.log("**********************************************");
-		    console.log("Artist: " + data.tracks.items[0].artists[0].name);
-	        console.log("The song's name : " + data.tracks.items[0].album.name);
-	        console.log("The album that the song is from : " + data.tracks.items[0].name);
-	        console.log("Preview link : " + data.tracks.items[0].preview_url);
+		    console.log("Artist: " + data.artists[0].name);
+	        console.log("The song's name : " + data.album.name);
+	        console.log("The album that the song is from : " + data.name);
+	        console.log("Preview link : " + data.preview_url);
 	     console.log("**********************************************");
 
     });
